@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="basa.css">
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <title>Professional Popup</title>
+</head>
+<body>
+
+  
+  <div class="container">
+
+    <!------------------------------ Tabs ------------------------------>
+    <div class="horizontal-align">
+      <a href="https://github.com/taeho-share/basa-chrome-extension/" target="basa_tab" style="text-decoration: none;margin-right:10px;">
+        <figure class="image is-48x48">
+          <!--img class="is-rounded" src="taeho-share-logo2.png" style="width:40px;"/-->
+        </figure>        
+      </a>
+      <div class="tabs is-left is-toggle is-toggle-rounded">
+        <ul>
+          <li class="is-active" data-tab="tabCodeGeneration">
+            <a>
+              <span class="icon is-small"><i class="fa-solid fa-magnifying-glass"></i></span>
+              <span>Scan</span>
+            </a>
+          </li>
+          <li data-tab="tabCodeExamples">
+            <a>
+              <span class="icon is-small"><i class="fa-solid fa-person-chalkboard"></i></span>
+              <span>Examples</span>
+            </a>
+          </li>
+          <li data-tab="tabResources">
+            <a>
+              <span class="icon is-small"><i class="fa-solid fa-cloud-arrow-down"></i></span>
+              <span>Resources</span>
+            </a>
+          </li>
+          <li data-tab="tabDocuments">
+            <a>
+              <span class="icon is-small"><i class="fa-solid fa-book"></i></span>
+              <span>Docs</span>
+            </a>
+          </li>
+          <li data-tab="tabAbout">
+            <a>
+              <span class="icon is-small"><i class="fa-solid fa-circle-info"></i></span>
+              <span>About</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!------------------------------ Code Generation Tab ------------------------------>
+    <div class="panel" id="tabCodeGeneration">
+      <!-- Options -->
+      <div class="box panel-option basa-option" >
+        <div class="horizontal-align">
+          <h2 style="margin-bottom: 10px;">Check code to generate for the current block in AppDev Studio</h2>
+          <!--i id="fileDropdownInfo" class="fa-lg fa-solid fa-circle-info" style="margin-left:10px;cursor:pointer"></i-->
+        </div>
+        <label class="checkbox">
+          <input type="checkbox" id="moBlockControllerCheckAll" class="moBlockController" value="CheckAll">
+          <b>Check All</b>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" class="moBlockController" value="GetterSetter">
+          Getter and Setter
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" class="moBlockController" value="ClearBlockData">
+          Clear Block Data
+        </label><br/>
+        <label class="checkbox">
+          <input type="checkbox" class="moBlockController" value="Intializer">
+          Initializer
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" class="moBlockController" value="LabelTooltip">
+          Label Help
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" class="moBlockController" value="ComplexRepeatedContainer">
+          Complex Repeated Container
+        </label>
+        
+      </div>
+
+      <!-- Result -->
+      <div class="panel-block">
+        <textarea
+            id="generatedCode"
+            class="generatedContent"
+            placeholder="Generated Code"></textarea>
+      </div>
+      
+    </div>     
+
+    <!------------------------------ Code Examples Tab ------------------------------>
+    <div class="panel is-hidden" id="tabCodeExamples">
+      
+      <!-- Options -->
+      
+      <div class="box panel-option basa-option">
+      
+        <div class="horizontal-align">
+          <h2>How may I assist you?</h2>
+          <i id="fileDropdownInfo" class="fa-lg fa-solid fa-circle-info" style="margin-left:10px;cursor:pointer"></i>
+        </div>
+      
+        <div class="select">
+          <select id="fileDropdown">
+            <option value="">Select an example</option>
+          </select>
+        </div>
+        
+      </div>
+
+      <!-- Result -->
+      <div class="panel-block">
+        <textarea
+            id="fileContent"
+            class="generatedContent"
+            placeholder="Code Example"></textarea>
+      </div>
+    </div>  
+
+    <!------------------------------ Resources Tab ------------------------------>
+    <div class="panel is-hidden" id="tabResources">
+
+      <div class="content has-text-left">
+        <div id="resourceFileList">Resource</div>
+      </div>
+      
+    </div>   
+    
+    <!------------------------------ Documents Tab ------------------------------>
+    <div class="panel is-hidden" id="tabDocuments">
+
+      <div class="content has-text-centered">
+        Documents
+      </div>
+      
+    </div>   
+
+    <!------------------------------ About Tab ------------------------------>
+    <div class="panel is-hidden" id="tabAbout" style="font-size: 12px;">
+
+      <div class="content has-text-left" style="margin: 20px 10px 0px 20px;">
+
+        <div class="block">
+
+          <h3>Welcome to BASA!</h3>
+
+          <p>
+          BASA is designed to empower developers by streamlining the creation of JavaScript controllers through templates and best practice guidelines. Our mission is to help you code smarter, not harder, by providing tools that enhance productivity and efficiency in your AppDev projects.
+          </p>
+        </div>
+
+        <div class="block">
+          <h4>Key Features:</h4>
+          <ul>
+            <li><strong>Template-Driven Development:</strong> Quickly generate code using standardized templates that follow best practices, ensuring consistency and reducing errors.
+            <li><strong>Time-Saving Automation:</strong> Automate repetitive tasks, allowing you to focus on writing high-quality, maintainable code.
+            <li><strong>User-Friendly Interface:</strong> With an intuitive UI, BASA makes it easy to generate, copy, and implement code blocks seamlessly.
+          </ul>          
+        </div>
+
+        <div class="block">
+            BASA is more than just a tool – it's your coding assistant, helping you achieve more in less time. Join us in contributing the way we develop AppDev solutions.
+        </div>
+
+      <blockquote>
+        <b>Version:</b> 1.0<br/>
+        <b>Author:</b> <a href="mailto://taeho.share@gmail.com">Taeho.Share</a><br/>
+        <b>License:</b> MIT<br/>
+        <b>Source Code:</b> <a href="https://github.com/taeho-share/basa-chrome-extension">GitHub Repository</a><br/>
+      </blockquote> 
+      
+    </div>   
+
+  </div>
+
+
+  <!-- Modal Structure -->
+  <div class="modal" id="contentModal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Text Content</p>
+        <button class="delete" aria-label="close" id="modalClose"></button>
+      </header>
+      <section class="modal-card-body">
+        <pre id="modalContent" style="white-space: pre-wrap;"></pre> <!-- Display content in preformatted text -->
+      </section>
+      <footer class="modal-card-foot">
+        <button id="btnCopyClipboard" class="button is-link">Copy to Clipboard</button>
+        <button class="button" id="btnCloseModal">Close</button>
+      </footer>
+    </div>
+  </div>
+  
+  
+  <!------------------------------ Button Bar ------------------------------>
+  <div class="buttonbar_container" >
+    
+    <div class="box button-block">
+      <button id="btnGenerateCode" class="button is-small">Generate</button>
+      <button id="btnCopyClipboard" class="button is-small">Copy</button>
+      <button id="btnShowInNewTab" class="button is-small">Open</button>
+      <button id="btnClose" class="button is-small is-danger">Close</button>
+    </div>
+
+  <script src="tab-handler.js"></script>
+  <script src="tab-action-button-handler.js"></script>  
+  <script src="tab-blockscan-controller.js"></script>  
+  <script src="tab-codeexample-controller.js"></script>
+  <script src="tab-resources-controller.js"></script>
+  <script src="modal.js"></script>
+  <script src="basa.js"></script>
+
+</body>
+</html>

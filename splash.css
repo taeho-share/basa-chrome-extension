@@ -1,0 +1,47 @@
+/* Center the entire page and prevent scrollbars */
+html, body {
+  width: 700px;
+  height: 600px;
+  background-color: #363636;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.5s ease; 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center the content inside the container */
+.container {
+  text-align: center; /* Center text and elements horizontally */
+  color:white;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Make the hero take full width */
+  height: 100%; /* Make the hero take full height */
+}
+
+.logo {
+  max-width: 300px;
+  width: 100%; /* Ensure the logo is responsive */
+  border-radius: 25px;
+}
+
+.progress {
+  margin-top: 20px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Fade-out effect */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
