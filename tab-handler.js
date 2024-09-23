@@ -26,12 +26,11 @@ var TabHandler = {
         this.panels.forEach(p => p.classList.add('is-hidden')); // Hide all panels
 
         tab.classList.add('is-active'); // Add active class to the clicked tab
-
+        
         // Show the corresponding panel
         const panelId = tab.getAttribute('data-tab');
-        if (this.currentTabId == undefined) {
-          this.currentTabId = panelId;
-        }
+        this.currentTabId = panelId;
+
         document.getElementById(panelId).classList.remove('is-hidden');
 
       });
