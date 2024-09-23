@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Display</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            display: flex;
+            justify-content: center;
+            height: 100vh; 
+        }
+
+        .message {
+            width: 95%;
+        }
+
+        .contents {
+            white-space: pre-wrap; 
+            border: 1px solid #ddd; 
+            padding: 10px;
+        }
+        
+        .title {
+            font-size: 28px;
+            color: white;
+            text-align: center;
+            width:100%;
+        }
+    </style>
+  </head>
+  <body>
+    <article class="message" xstyle="margin:20px;width:90%">
+        <div class="message-header">
+            <figure class="image is-48x48" style="padding:0px;margin:0px">
+                <img class="is-rounded" src="taeho-share-logo.png" />
+            </figure>
+            <span class="title">BASA Script Contents</span>
+        </div>
+        <div class="message-body">
+            <xmp id="newTabContent" class="contents">${content}</xmp>
+        </div>
+    </article>
+
+</html>

@@ -1,0 +1,141 @@
+body {
+  width: 700px;
+  height: 600px;
+  overflow: hidden;
+  margin:0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.is-hidden {
+  display: none;
+}
+
+/* Header Section -------------------------------------------------- */
+.container {
+  flex-grow: 1;
+  margin: 5px;
+  padding: 0;
+  xborder: 2px solid;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.horizontal-align {
+  display: flex;
+  align-items: center; /* Aligns items vertically to the center */
+}
+
+/* Tabs ----------*/
+table.header {
+  width:100%;
+}
+
+td.iconcell {
+  padding:10px 15px 5px 15px;
+}
+
+td.tabcell {
+  width:100%;
+}
+
+.tabs {
+  flex-grow: 1; /* Allow tabs to take up available space */
+  margin-right: 20px;
+}
+
+.basa-tab {
+  margin:0x !important;
+  padding: 2px !important;
+  color: #1D3557;
+}
+
+.tabiconbutton {
+  font-size:30px;
+  color: #1D3557;
+  cursor:pointer;
+  padding-top: 5px;
+}
+
+/* Custom styles for the active tab */
+.tabs ul li.is-active a {
+  background-color: #457B9D !important; /* Custom background color */
+  color: #fff !important; /* Change text color to white */
+  border-bottom: 2px solid #0047ab; /* Optional border to highlight the active tab */
+}
+
+/* Panels Section -------------------------------------------------- */
+
+/* Ensuring the panels take up the remaining space inside the container */
+.panel {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin:0px !important;
+  padding:10px;
+  Xfont-size:12px;
+}
+
+/* The parent of fileContent (panel-block) should fill all available space */
+.panel-block {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden; /* Ensure no overflow */
+}
+
+.basa-option {
+  background-color:  #f2f2f2;
+  xcolor: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px !important;
+
+}
+
+.basa-option .checkbox {
+  margin-right: 30px;
+  min-width: 150px;
+}
+
+/* Scan and Code Panel Section -------------------------------------------------- */
+
+/* Ensure the textarea fills the parent container */
+textarea.generatedContent {
+  margin:0px;
+  flex-grow: 1;
+  width: 100%; /* Make sure it fills the width */
+  resize: none; /* Prevent resizing */
+  xborder: none; /* Optional: Remove border */
+  padding: 0px; /* Optional: Add some padding */
+  box-sizing: border-box; /* Include padding and border in width/height calculations */
+  font-size:12px;
+}
+
+/* Modal adjustments */
+.modal-card-body {
+  white-space: pre-wrap; /* Preserve line breaks and spaces */
+}
+
+
+/* Footer Section -------------------------------------------------- */
+.buttonbar_container {
+  xborder: 2px solid;
+  margin: 5px;
+  padding: 0;
+  xbackground-color: yellow;
+}
+
+.button-block {
+  xbackground-color: green;
+  margin:0px !important;
+  padding:10px !important;
+}
+
+.button-block .button {
+  width: 120px;
+  xheight: 35px !important;
+}

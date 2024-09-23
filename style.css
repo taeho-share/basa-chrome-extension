@@ -1,0 +1,184 @@
+body {
+    width: 700px;
+    height: 600px;
+    margin: 0;
+    display: flex;
+    justify-content: center;    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+div.container {
+    width:100%;
+    width:100%;  
+    margin: 0px;
+}
+
+/** ------------------------------ Header Style Section ------------------------------**/
+div.header {
+  background-color: #2d3142;
+}
+
+table.header {
+  background-color: #2d3142;
+}
+
+td.header {
+  text-align: left;
+  vertical-align: top;
+  width: 90%;
+}
+
+td.setting {
+  padding-right: 5px;
+  text-align:center;
+  vertical-align: bottom;
+}
+
+td.setting img {
+  cursor: pointer;
+}
+
+img.logo {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+img.headerIcon {
+  width: 20px;
+  height: 20px;  
+}
+
+div.header_title {
+  margin: 5px 0px 5px 0px;
+  font-size: 18px;
+  color: #d8d5db;
+}
+
+div.header_content {
+  font-size: 10px;
+  color: #d8d5db;
+  padding-right: 20px;
+  margin-bottom: 0px;
+}
+
+/** ------------------------------ Action Section ------------------------------**/
+
+div.menuContent {
+  padding: 10px 0px 10px 0px;
+  height: auto;  
+}
+
+table.menuContent {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-width: 1px;
+}
+
+table.menuContent td {
+  padding: 10px 10px 10px 10px;
+  text-align: left;
+  vertical-align: top;
+  background-color: rgb(228, 228, 228);
+  border-radius: 5px;
+  color: #2d3142;
+}
+
+td.menuContent {
+  width: 30%;
+}
+
+td.menuOptions {
+  width: 70%;
+}
+
+div.menuLabel {
+  padding-bottom: 10px;
+}
+
+
+/** ------------------------------ Result Section ------------------------------**/
+
+div.result {
+  padding: 0px 10px 10px 10px;
+}
+
+table.result {
+  width:100%;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 120px;
+}
+
+textarea.generatedCode {
+  padding: 10px;
+  font-size: 8px;
+  border: 1px solid #ccc;
+  height: 340px;
+  width: 97%;
+}
+
+
+
+/* In progress spinner */
+#overlay {
+  position: fixed; /* Stays in the same place, even when scrolling */
+  top: 75px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+  z-index: 1000; /* Ensure it appears on top */
+  display: none; /* Hidden by default */
+  cursor: pointer;
+}
+
+/* Optional styling for content inside the overlay */
+#overlay-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width:90%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  color: white;
+  line-height: 1.8;
+  font-size: 24px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.close {
+    color: red;
+    float: right;
+    font-size: 36px;
+    font-weight: bold;
+}
