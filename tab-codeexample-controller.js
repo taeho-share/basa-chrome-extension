@@ -49,7 +49,7 @@ async function fetchExampleFileListFromGitHub() {
     if (response.ok) {
       const files = await response.json();
       // Filter to include only .txt files
-      const textFiles = files.filter(file => file.name.endsWith('.txt'));
+      const textFiles = files.filter(file => file.name.endsWith('.js'));
       return textFiles.map(file => ({ name: file.name, downloadUrl: file.download_url }));
     } else {
       console.error("Error fetching file list from GitHub:", response.statusText);
