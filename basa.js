@@ -14,9 +14,9 @@ var MainHandler = {
     initialize: function() {
         if (this.conf.printConsole) console.log('MainHandler.initialize');
         TabHandler.initialize();
-        ActionButtonHandler.initialize();        
+        TabActionButtonHandler.initialize();        
         //OptionHandler.initialize();
-        //TabBlockController.initialize();
+        TabBlockScanController.initialize();
         TabCodeExampleController.initialize();
         TabResourcesController.initialize();
     }
